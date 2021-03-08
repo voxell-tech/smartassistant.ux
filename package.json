@@ -1,0 +1,14 @@
+{
+  "name": "smartassistant.voxell.ui",
+  "displayName": "SA UI",
+  "author": "Nixon & Vincexodus",
+  "description": "UI visual display for Smart Assistant",
+  "keywords": [
+    "UI",
+    "smart assistant"
+  ],
+  "license": "GPL v3.0",
+  "unity": "2020.2",
+  "unityRelease": "0f1",
+  "version": "0.1.0"
+}
