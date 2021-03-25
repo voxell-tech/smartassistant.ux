@@ -25,7 +25,7 @@ using UnityEngine.UI;
 using System.Collections;
 
 [ExecuteInEditMode]
-public partial class BGCanvas : MonoBehaviour
+public class BGCanvas : MonoBehaviour
 {
   #region Device Performance
   // refering to resource monitor of computer **WinOs only**
@@ -38,35 +38,23 @@ public partial class BGCanvas : MonoBehaviour
   public TextMeshProUGUI datetimeText;
   [Header("Perfomance")]
   public TextMeshProUGUI performance;
-  [Header("Weather")]
-  public TextMeshProUGUI temperature;
-  public TextMeshProUGUI windSpeed, windDirection;
-  public TextMeshProUGUI description;
-  public TextMeshProUGUI humidity;
-  public TextMeshProUGUI location;
-  float currentTime = 0f;
+  
+  // float currentTime = 0f;
   public float timer = 0f;
   public float delay = 1800f;
   #endregion
 
-  [Header("Weather Usage")]
-  string h24 = "00";
-  public int skystate = 0;
-  public Image weatherIcon;
-  public Sprite[] Morning;
-  public Sprite[] Noon;
-  public Sprite[] Night;
+  [HideInInspector]
+  public string h24 = "00";
   
   [Header("Additional scripts")]
   public WebIP web;
+  public WeatherUI UI;
 
-  //Morning : 5am-11:59am, Noon : 12pm-6:59pm, Night : 7pm-4:59am
-  //05 <= Morning < 12, 12<= Noon < 19, 19 <= Night < 05
-  
   void Start()
   {
     UpdateWeather();
-    currentTime = 0f;
+    // currentTime = 0f;
     // print("VRAM " + SystemInfo.graphicsMemorySize + " MB");
     // print("Processor Frequency " +SystemInfo.processorFrequency + " Mhz");
     // print("RAM " + SystemInfo.systemMemorySize + " MB");
@@ -76,13 +64,13 @@ public partial class BGCanvas : MonoBehaviour
   // Update is called once per frame
   void Update()
   {
-    currentTime = 1*Time.time;
-    if(currentTime >= timer)
-    {
-      print("weather reload");
-      // InitWeather();
-      timer += delay;
-    }
+    // currentTime = 1*Time.time;
+    // if(currentTime >= timer)
+    // {
+    //   print("weather reload");
+    //   // InitWeather();
+    //   timer += delay;
+    // }
     UpdateDateTime();
   }
 
@@ -99,16 +87,14 @@ public partial class BGCanvas : MonoBehaviour
 
     datetimeText.text = $"{day}<sup>th</sup> <sub>of</sub> {mth.ToLower()} {yr}\n{hr}:{min}:{sec}";
   }
-  void UpdateWeather()
+
+  public void UpdateWeather()
   {
     web.Main();
-    temperature.text = WebIP.temperature + "C";
-    description.text = WebIP.description;
-    humidity.text = WebIP.humid;
-    windSpeed.text = WebIP.windSpeed + "km/h";
-    windDirection.text = WebIP.windDir;
+    UI.UpdateSkyState();
+    UI.IconChange();
+    UI.UpdateText();
     print("weather Updated!");
-    InitWeather();
   }
   
   void UpdatePerformance()
