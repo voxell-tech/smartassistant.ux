@@ -2,8 +2,8 @@
     "name": "SmartAssistant.UX.Runtime",
     "rootNamespace": "",
     "references": [
-        "GUID:b23efe0d0bd83184681bd63517e3c327",
-        "GUID:6055be8ebefd69e48b49212b09b47b2f"
+        "GUID:6055be8ebefd69e48b49212b09b47b2f",
+        "GUID:b23efe0d0bd83184681bd63517e3c327"
     ],
     "includePlatforms": [],
     "excludePlatforms": [],
