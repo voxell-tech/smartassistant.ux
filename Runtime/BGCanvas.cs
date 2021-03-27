@@ -21,7 +21,6 @@ using System;
 using System.Diagnostics;
 using UnityEngine;
 using UnityEngine.UI;
-
 using System.Collections;
 
 [ExecuteInEditMode]
@@ -43,9 +42,6 @@ public class BGCanvas : MonoBehaviour
   public float timer = 0f;
   public float delay = 1800f;
   #endregion
-
-  [HideInInspector]
-  public string h24 = "00";
   
   [Header("Additional scripts")]
   public WebIP web;
