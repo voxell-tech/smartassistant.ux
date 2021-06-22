@@ -25,7 +25,7 @@ using System.Linq;
 using Newtonsoft.Json;
 using HtmlAgilityPack;
 
-namespace SmartAssistant.UX
+namespace Voxell.UX
 {
   public class WebIP : MonoBehaviour
   {

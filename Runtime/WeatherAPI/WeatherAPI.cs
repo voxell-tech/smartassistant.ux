@@ -24,7 +24,7 @@ using UnityEngine;
 using UnityEngine.Networking;
 using TMPro;
 
-namespace SmartAssistant.UX
+namespace Voxell.UX
 {
   public class WeatherAPI : MonoBehaviour
   {

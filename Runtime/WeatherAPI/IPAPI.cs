@@ -23,7 +23,7 @@ using UnityEngine;
 using UnityEngine.Networking;
 using Newtonsoft.Json.Linq;
 
-namespace SmartAssistant.UX
+namespace Voxell.UX
 {
   public class IPAPI : MonoBehaviour
   {

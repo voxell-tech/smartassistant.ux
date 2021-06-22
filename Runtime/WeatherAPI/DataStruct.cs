@@ -19,7 +19,7 @@ All rights reserved.
 
 using System.Runtime.CompilerServices;
 
-namespace SmartAssistant.UX
+namespace Voxell.UX
 {
   // Conditions explained: https://openweathermap.org/weather-conditions
   [System.Serializable]

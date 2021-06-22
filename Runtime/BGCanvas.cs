@@ -21,7 +21,7 @@ using System;
 using System.Diagnostics;
 using UnityEngine;
 
-namespace SmartAssistant.UX
+namespace Voxell.UX
 {
   [ExecuteInEditMode]
   public class BGCanvas : MonoBehaviour

@@ -23,7 +23,7 @@ using UnityEngine;
 using UnityEngine.UI;
 
 
-namespace SmartAssistant.UX
+namespace Voxell.UX
 {
   public class WeatherUI : MonoBehaviour
   {
