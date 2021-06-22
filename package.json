@@ -1,17 +1,17 @@
 {
   "name": "smartassistant.voxell.ux",
   "displayName": "SA UX",
-  "author": "Nixon & Vincexodus",
+  "author": "Vincexodus",
   "description": "UI visual display for Smart Assistant",
   "keywords": [
     "UI",
-    "smart assistant"
+    "voxell"
   ],
   "license": "GPL v3.0",
   "unity": "2020.2",
   "unityRelease": "0f1",
   "version": "0.2.0",
   "dependencies": {
-    "smartassistant.voxell.core": "1.0.0"
+    "voxell.core": "1.0.0"
   }
 }
